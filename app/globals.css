@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 60% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 60% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 60% 20%;
+    --primary: 45 99% 55%;
+    --primary-foreground: 20 60% 20%;
+    --secondary: 20 60% 20%;
+    --secondary-foreground: 45 99% 55%;
+    --muted: 45 10% 95%;
+    --muted-foreground: 20 10% 40%;
+    --accent: 45 70% 80%;
+    --accent-foreground: 20 60% 20%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 20 10% 90%;
+    --input: 20 10% 90%;
+    --ring: 45 99% 55%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 20 60% 10%;
+    --foreground: 45 99% 55%;
+    --card: 20 60% 15%;
+    --card-foreground: 45 99% 55%;
+    --popover: 20 60% 15%;
+    --popover-foreground: 45 99% 55%;
+    --primary: 45 99% 55%;
+    --primary-foreground: 20 60% 20%;
+    --secondary: 20 60% 20%;
+    --secondary-foreground: 45 99% 55%;
+    --muted: 20 30% 20%;
+    --muted-foreground: 45 30% 70%;
+    --accent: 20 30% 30%;
+    --accent-foreground: 45 99% 55%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 20 30% 30%;
+    --input: 20 30% 30%;
+    --ring: 45 99% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.section-heading {
+  @apply relative text-center text-3xl md:text-4xl font-bold mb-12;
+}
+
+.section-heading::before {
+  content: "";
+  @apply absolute left-1/2 -translate-x-1/2 -top-6 w-32 h-1 bg-primary;
+}
+
+.section-heading::after {
+  content: "";
+  @apply absolute left-1/2 -translate-x-1/2 -bottom-6 w-32 h-1 bg-primary;
+}
+
+.section-title {
+  @apply text-primary font-medium text-lg md:text-xl mb-2 text-center;
+}
+
